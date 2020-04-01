@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <base target="_top">
+  </head>
+  <body>
+    <div class="sidebar">
+      <form name="webinarForm" id="webinarForm">
+    
+
+        <div class="block form-group">
+          <span style="color:white"><b>First Name</b></span>
+          <br>
+          <input type="text" id="firstName" name="firstName" placeholder="first name (required)" value=""/>
+          <br>
+       </div>
+
+       <br>
+       <div class="block form-group">
+         <input type="button" class="action" value="Start Search" onclick="startSearch()" />
+       </div>
+   
+     </form>
+    </div>
+   
+  <script>
+   function startSearch() {
+        google.script.run.startLookup(document.getElementById('webinarForm'));
+    }
+  </script>  
+   
+  </body>
+</html>
